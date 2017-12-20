@@ -24,9 +24,7 @@ class NewsController
 		{
 			$newsItem = News::getNewsItemByID($id);
 
-			echo '<pre>';
-			print_r($newsItem);
-			echo '</pre>';
+			require_once(ROOT .'/view/news/view.php');
 		}
 
 		return true;
