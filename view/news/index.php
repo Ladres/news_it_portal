@@ -11,10 +11,10 @@
     <title>Главная страница</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/view/news/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/blog-home.css" rel="stylesheet">
+    <link href="/view/news/css/blog-home.css" rel="stylesheet">
 
   </head>
 
@@ -23,7 +23,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">IT News</a>
+        <a class="navbar-brand" href="#">It news</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -60,10 +60,11 @@
             <small>Самые новые</small>
           </h1>
 
+
           <!-- Blog Post -->
           <?php foreach($newsList as $newsItem):?>
           <div class="card mb-4">
-            <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+             <img class="img-fluid rounded" src="<?php echo $newsItem['preview']?>" alt="">
             <div class="card-body">
               <h2 class="card-title"><?php echo $newsItem['title']; ?></h2>
               <p class="card-text"><?php echo $newsItem['short_content']; ?></p>
@@ -74,6 +75,9 @@
             </div>
           </div>
           <?php endforeach; ?>
+
+
+
           <!-- Pagination -->
           <ul class="pagination justify-content-center mb-4">
             <li class="page-item">

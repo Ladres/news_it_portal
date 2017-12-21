@@ -11,10 +11,10 @@
     <title>Выбранная новость</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/view/news/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/blog-post.css" rel="stylesheet">
+    <link href="/view/news/css/blog-post.css" rel="stylesheet">
 
   </head>
 
@@ -23,7 +23,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">It news</a>
+        <a class="navbar-brand" href="test/news">It news</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -78,6 +78,7 @@
           <hr>
 
           <!-- Post Content -->
+          <p class="lead"><?php echo $newsItem['short_content']?></p>
           <p class="lead"><?php echo $newsItem['content']?></p>
 
           <hr>
