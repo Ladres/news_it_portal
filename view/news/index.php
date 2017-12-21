@@ -64,7 +64,7 @@
           <!-- Blog Post -->
           <?php foreach($newsList as $newsItem):?>
           <div class="card mb-4">
-             <img class="img-fluid rounded" src="<?php echo $newsItem['preview']?>" alt="">
+            <img class="card-img-top" src="<?php echo $newsItem['preview']?>" alt="">
             <div class="card-body">
               <h2 class="card-title"><?php echo $newsItem['title']; ?></h2>
               <p class="card-text"><?php echo $newsItem['short_content']; ?></p>

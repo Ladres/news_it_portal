@@ -39,11 +39,31 @@ class News
 			$newsList[$i]['date'] = $row['date'];
 			$newsList[$i]['short_content'] = $row['short_content'];
 			$newsList[$i]['preview'] = $row['preview'];
+			$newsList[$i]['type'] = $row['type'];
 			$i++;
 		}
 		return $newsList;
 		
-}
+	}
+	public static function getNewsItemByType($type)
+	{
+		$link = Db::getConnection();
+		$query = "SELECT * FROM news WHERE type=".$type;
+
+		$result = mysqli_query($link, $query) or die(mysqli_error($link));
+		$i = 0;
+		while($row=mysqli_fetch_assoc($result))
+		{
+			$newsList[$i]['id'] = $row['id'];
+			$newsList[$i]['title'] = $row['title'];
+			$newsList[$i]['date'] = $row['date'];
+			$newsList[$i]['short_content'] = $row['short_content'];
+			$newsList[$i]['preview'] = $row['preview'];
+			$newsList[$i]['type'] = $row['type'];
+			$i++;
+		}
+		return $newsList;
+	}
 
 }
 ?>
