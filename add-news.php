@@ -67,11 +67,11 @@
         </div>
 
         <!-- Button (Double) -->
-        <div class="form-group">
+       <div class="form-group">
             <label class="col-md-4 control-label" for="submitButton"></label>
             <div class="col-md-8">
-                <button id="submitButton" name="submitButton" class="btn btn-primary onclick="history.go(-1); return false;"">Save</button>
-                <button id="cancelButton" name="cancelButton" class="btn btn-danger" onclick="history.go(-1); return false;">Cancel</button>
+                <button id="submitButton" name="submitButton" class="btn btn-primary" onclick="history.go(-1); return false;">Save</button>
+                <button id="cancelButton" name="cancelButton" class="btn btn-danger" onclick="history.go(-2); return false;">Cancel</button>
             </div>
         </div>
 
