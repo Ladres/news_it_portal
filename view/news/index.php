@@ -41,7 +41,7 @@
               <a class="nav-link" href="#">Сервисы</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Обратная связь</a>
+              <a class="nav-link" href="/view/news/add-news.php">Обратная связь</a>
             </li>
           </ul>
         </div>
@@ -57,7 +57,7 @@
         <div class="col-md-8">
 
           <h1 class="my-4">Новости
-            <small>Самые новые</small>
+            <small><a href="../add-news.php">Добавить новость</a></small>
           </h1>
 
 
