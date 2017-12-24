@@ -25,7 +25,7 @@ class News
 		//Подключаемся к бд и формируем линк в db.php
 		$link = Db::getConnection();
 		//Формируем тестовый запрос:
-		$query = "SELECT id, title, date, short_content, preview FROM news ORDER BY date DESC";
+		$query = "SELECT id, title, date, short_content, preview FROM news ORDER BY id DESC";
 
 		//Делаем запрос к БД, результат запроса пишем в $result:
 		$result = mysqli_query($link, $query) or die(mysqli_error($link));
