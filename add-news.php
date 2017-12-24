@@ -55,29 +55,44 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="textinput">URL на картинку</label>
             <div class="col-md-6">
-                <input id="textinput" name="preview" type="text" placeholder="" class="form-control input-md" required="">
+                <input id="textinputPreview" name="preview" type="text" placeholder="" class="form-control input-md" required="">
             </div>
         </div>
-
+		
          <div class="form-group">
-            <label class="col-md-4 control-label" for="textinput">Категория(необязательно)</label>
+            <label class="col-md-4 control-label" for="textinput">Категория</label>
             <div class="col-md-6">
                 <input id="textinput" name="type" type="text" placeholder="" class="form-control input-md" required="">
             </div>
         </div>
 
         <!-- Button (Double) -->
-       <div class="form-group">
+        <div class="form-group">
             <label class="col-md-4 control-label" for="submitButton"></label>
             <div class="col-md-8">
                 <button id="submitButton" name="submitButton" class="btn btn-primary">Save</button>
-                <button id="cancelButton" name="cancelButton" class="btn btn-danger" onclick="history.go(-2); return false;">Cancel</button>
+                <button id="cancelButton" name="cancelButton" class="btn btn-danger" onclick='location.href="/news"''>Cancel</button>
             </div>
         </div>
 
     </fieldset>
 </form>
+<!--
+<form action="" method="post">        	
+	<div class="col-md-6">
+        <button id="checkButton" name="checkButton" class="btn ">Проверить URL...</button>
+    </div>
+</form>
 
+<script type="text/javascript">
+	function someFunc()
+	{
+		url = document.getElementById("textinputPreview").value;
+		document.write('<img class="card-img-top" src="'+ url +'" alt="">');
+	}
+		document.getElementById("checkButton").onclick = someFunc;
+</script>
+-->
 <?php
     $host = 'us-cdbr-iron-east-05.cleardb.net'; 
     $user = 'ba87b64b655102'; 
@@ -98,9 +113,14 @@
         $date = date('Y-m-d h:m:s');
         $query = "INSERT INTO news (title,date,short_content,content,author_name,preview,type) VALUES ('$title', '$date','$short_content', '$content', '$author', '$preview', '$type')";
         mysqli_query($link, $query);
-        echo 'Новость добавлена';
+        ?> 
+        <div class="container">
+	        <div class="alert alert-success">
+				<strong>Новость успешно добавлена!</strong> Вы можете <a href="/news" class="alert-link">перейти на главную страницу.</a>.
+			</div>
+		</div>
+  		<?php
     }   
-
 ?>
 
 <script src="vendor/jquery/jquery.min.js"></script>
